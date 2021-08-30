@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "184362e8-64c4-49d7-8dd0-a9e26a30794a",
+		"name": "Todos App - Localhost",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create New Todo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Node\",\r\n    \"description\":\"Node is a javascript based programming language\",\r\n    \"published\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/createTodo",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"createTodo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch All Todos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/fetchAllTodos",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"fetchAllTodos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Todo using ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/fetchTodo/60fed2cd8db85f398cb7b983",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"fetchTodo",
+						"60fed2cd8db85f398cb7b983"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch single todo using title",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/fetchAllTodos/?title=J.S",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"fetchAllTodos",
+						""
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "J.S"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch All Published Todos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/fetchPublishedTodos",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"fetchPublishedTodos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Todo using ID",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"PHP\",\r\n    \"description\":\"PHP is a programming language.\",\r\n    \"published\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/updateTodo/60fed2cd8db85f398cb7b983",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"updateTodo",
+						"60fed2cd8db85f398cb7b983"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete single todo using ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/deleteTodo/60fed2cd8db85f398cb7b983",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"deleteTodo",
+						"60fed2cd8db85f398cb7b983"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete All Todos",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/deleteAllTodos",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"deleteAllTodos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "ded6973b-50fc-4718-8c53-128705bddaf6",
+		"name": "Todos App - Heroku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Fetch All Todos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://crud-rest-api-2021.herokuapp.com/api/fetchAllTodos",
+					"protocol": "https",
+					"host": [
+						"crud-rest-api-2021",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"fetchAllTodos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New Todo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Phython\",\r\n    \"description\":\"Phython is a programming language\",\r\n    \"published\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://crud-rest-api-2021.herokuapp.com/api/createTodo",
+					"protocol": "https",
+					"host": [
+						"crud-rest-api-2021",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"createTodo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Todo using ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://crud-rest-api-2021.herokuapp.com/api/fetchTodo/6103924fef32e900153fdd93",
+					"protocol": "https",
+					"host": [
+						"crud-rest-api-2021",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"fetchTodo",
+						"6103924fef32e900153fdd93"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Single Todo using title",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://crud-rest-api-2021.herokuapp.com/api/fetchAllTodos/?title=Node",
+					"protocol": "https",
+					"host": [
+						"crud-rest-api-2021",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"fetchAllTodos",
+						""
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Node"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch All Published Todos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://crud-rest-api-2021.herokuapp.com/api/fetchPublishedTodos",
+					"protocol": "https",
+					"host": [
+						"crud-rest-api-2021",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"fetchPublishedTodos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Todo Using ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Node JS\",\r\n    \"description\":\"NODE Js programming language\",\r\n    \"published\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://crud-rest-api-2021.herokuapp.com/api/updateTodo/61032aa171b0d31f14bcdceb",
+					"protocol": "https",
+					"host": [
+						"crud-rest-api-2021",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"updateTodo",
+						"61032aa171b0d31f14bcdceb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Single Todo using ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://crud-rest-api-2021.herokuapp.com/api/deleteTodo/61032aa171b0d31f14bcdceb",
+					"protocol": "https",
+					"host": [
+						"crud-rest-api-2021",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"deleteTodo",
+						"61032aa171b0d31f14bcdceb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete All Todos",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://crud-rest-api-2021.herokuapp.com/api/deleteAllTodos",
+					"protocol": "https",
+					"host": [
+						"crud-rest-api-2021",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"deleteAllTodos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

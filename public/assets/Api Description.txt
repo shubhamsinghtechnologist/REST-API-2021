@@ -1,0 +1,63 @@
+                                        TODOS APP APIs Description
+                                        ---------------------------
+There are Eight routes:
+
+/api/createTodo                   POST
+/api/fetchAllTodos                GET
+/api/fetchTodo/:id                GET
+/api/fetchPublishedTodos          GET
+/api/updateTodo/:id               PUT
+/api/deleteTodo/:id               DELETE
+/api/deleteAllTodos               DELETE
+/api/fetchAllTodos/?title=Html    GET
+
+-------------------------------------------------------------------------------
+01st: Create New Todo (POST)
+
+Api Absolute URL: http://localhost:3000/api/createTodo
+Header: Content-Type: application/json
+Body: 
+{
+    "title": "Html",
+    "description":"Html is a scripting language",
+    "published": true
+}
+-------------------------------------------------------------------------------
+02nd: Fetch All Todos (GET)
+
+Api Absolute URL: http://localhost:3000/api/fetchAllTodos
+-------------------------------------------------------------------------------
+03rd: Fetch Todo based on id (GET)
+
+Api Absolute URL: http://localhost:3000/api/fetchTodo/:id
+-------------------------------------------------------------------------------
+04th: Fetch All published true Todos (GET)
+
+Api Absolute URL: http://localhost:3000/api/fetchPublishedTodos
+-------------------------------------------------------------------------------
+05th: Fetch Todo based on title (GET)
+
+Api Absolute URL: http://localhost:3000/api/fetchAllTodos/?title=Html
+-------------------------------------------------------------------------------
+06th: Update Todo based on id (PUT)
+
+Api Absolute URL: http://localhost:3000/api/updateTodo/:id 
+Example: http://localhost:3000/api/updateTodo/60d44bdce5864726a8e596f6 
+Header: Content-Type: application/json
+Body: 
+{
+    "title": "Html",
+    "description":"Html is a scripting language",
+    "published": true
+}
+-------------------------------------------------------------------------------
+07th: Delete Todo based on id (DELETE)
+
+Api Absolute URL: http://localhost:3000/api/deleteTodo/:id
+-------------------------------------------------------------------------------
+08th: Delete all Todo (DELETE)
+
+Api Absolute URL: http://localhost:3000/api/deleteAllTodos
+-------------------------------------------------------------------------------
+
+-------------------------------- THE END -----------------------------------------------
